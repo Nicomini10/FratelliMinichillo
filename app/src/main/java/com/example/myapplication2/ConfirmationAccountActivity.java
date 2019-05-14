@@ -1,6 +1,7 @@
 package com.example.myapplication2;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -81,6 +82,8 @@ public class ConfirmationAccountActivity extends AppCompatActivity {
                     progressDialog.dismiss();
                     _confirmButton.setEnabled(true);
                     Toast.makeText(getBaseContext(), "Account confermato!", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
                 } else {
                     progressDialog.dismiss();
                     _confirmButton.setEnabled(true);

@@ -53,6 +53,12 @@
                 android:importantForAutofill="no" tools:targetApi="o" />
         </android.support.design.widget.TextInputLayout>
 
+        <CheckBox android:id="@+id/checkbox_remember_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ricordami"
+            android:onClick="onCheckboxClicked"/>
+
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"

@@ -1,5 +1,7 @@
 package com.example.myapplication2;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,6 +11,7 @@ import android.util.Log;
 
 import android.content.Intent;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +31,6 @@ import butterknife.ButterKnife;
 public class LoginActivity extends AppCompatActivity {
 
     private static final String TAG = "LoginActivity";
-    private static final int REQUEST_SIGNUP = 0;
 
     @BindView(R.id.input_username)
     EditText _usernameText;
@@ -38,16 +40,34 @@ public class LoginActivity extends AppCompatActivity {
     Button _loginButton;
     @BindView(R.id.link_signup)
     TextView _signupLink;
+    @BindView(R.id.checkbox_remember_me)
+    CheckBox _remember_me_box;
 
     JSONObject loginJson = new JSONObject();
     private final String LOGIN_URL = "http://fratelliminichillows.altervista.org/login.php";
     private RequestQueue requestQueue;
+
+    private SharedPreferences loginPreferences;
+    private SharedPreferences.Editor loginPrefsEditor;
+    private Boolean saveLogin;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
+        loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
+        loginPrefsEditor = loginPreferences.edit();
+
+        saveLogin = loginPreferences.getBoolean("saveLogin", false);
+        if (saveLogin == true) {
+            _usernameText.setText(loginPreferences.getString("username", ""));
+            _passwordText.setText(loginPreferences.getString("password", ""));
+            _remember_me_box.setChecked(true);
+        }
+
+
 
         _loginButton.setOnClickListener(new View.OnClickListener() {
 
@@ -63,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Start the Signup activity
                 Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
-                startActivityForResult(intent, REQUEST_SIGNUP);
+                startActivity(intent);
             }
         });
 
@@ -143,18 +163,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_SIGNUP) {
-            if (resultCode == RESULT_OK) {
-
-                // TODO: Implement successful signup logic here
-                // By default we just finish the Activity and log them in automatically
-                this.finish();
-            }
-        }
-    }
-
-    @Override
     public void onBackPressed() {
         // disable going back to the MainActivity
         moveTaskToBack(true);
@@ -162,6 +170,20 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess() {
         _loginButton.setEnabled(true);
+
+        String username = _usernameText.getText().toString();
+        String password = _passwordText.getText().toString();
+
+        if (_remember_me_box.isChecked()) {
+            loginPrefsEditor.putBoolean("saveLogin", true);
+            loginPrefsEditor.putString("username", username);
+            loginPrefsEditor.putString("password", password);
+            loginPrefsEditor.commit();
+        } else {
+            loginPrefsEditor.clear();
+            loginPrefsEditor.commit();
+        }
+
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
         this.finish();
@@ -202,5 +224,12 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         return valid;
+    }
+
+    public void onCheckboxClicked(View view) {
+        if(_remember_me_box.isChecked())
+            Toast.makeText(getBaseContext(), "Ricorderò i tuoi dati!", Toast.LENGTH_SHORT).show();
+        else Toast.makeText(getBaseContext(), "Non ricorderò i tuoi dati!", Toast.LENGTH_SHORT).show();
+
     }
 }
