@@ -28,11 +28,4 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fratelliminichillo.com"
-        android:textColor="@color/common_google_signin_btn_text_dark_focused" />
-
 </LinearLayout>
