@@ -21,7 +21,6 @@
         android:theme="@style/AppTheme.Green"
         android:usesCleartextTraffic="true">
         <activity android:name=".ConfirmationAccountActivity"></activity>
-        <activity android:name=".ConfirmationActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
