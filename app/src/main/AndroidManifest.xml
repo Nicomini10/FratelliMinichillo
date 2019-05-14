@@ -36,7 +36,6 @@
         <activity android:name=".EmailActivity" />
         <activity android:name=".InfoAziendaActivity" />
         <activity android:name=".ContattiActivity" />
-        <activity android:name=".PersonaleAziendaleActivity" />
         <activity android:name=".ProdottiActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

@@ -2,6 +2,7 @@ package com.example.myapplication2;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ public class ContattiActivity extends AppCompatActivity {
     private ImageView facebook;
     private ImageView instagram;
     private ImageView twitter;
+    private FloatingActionButton email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,7 @@ public class ContattiActivity extends AppCompatActivity {
 
         facebook = (ImageView) findViewById(R.id.imageFacebook);
         instagram= (ImageView) findViewById(R.id.imageInstagram);
-        twitter = (ImageView) findViewById(R.id.imageTwitter);
+        email = (FloatingActionButton) findViewById(R.id.buttonEmail);
 
         facebook.setOnClickListener(new View.OnClickListener() {
 
@@ -39,19 +41,19 @@ public class ContattiActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Uri uri = Uri.parse("https://www.instagram.com");
+                Uri uri = Uri.parse("https://www.instagram.com/nicomini10_");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
         });
 
-        twitter.setOnClickListener(new View.OnClickListener() {
+        email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Uri uri = Uri.parse("https://twitter.com");
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                Intent intent = new Intent(getApplicationContext(), EmailActivity.class);
                 startActivity(intent);
+
             }
         });
 

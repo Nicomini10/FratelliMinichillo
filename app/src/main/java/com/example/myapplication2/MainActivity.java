@@ -28,18 +28,6 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(getApplicationContext(), EmailActivity.class);
-                startActivity(intent);
-
-                //Snackbar.make(view, "fratelliminichillo@gmail.com", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -76,11 +64,6 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_dove_siamo) {
 
             Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
-            startActivity(intent);
-
-        } else if (id == R.id.nav_personale_aziendale) {
-
-            Intent intent = new Intent(getApplicationContext(), PersonaleAziendaleActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_contatti) {

@@ -12,10 +12,6 @@
             android:id="@+id/nav_dove_siamo"
             android:icon="@drawable/ic_location_on"
             android:title="Dove Siamo" />
-        <item
-            android:id="@+id/nav_personale_aziendale"
-            android:icon="@drawable/ic_supervisor_account"
-            android:title="Personale Aziendale" />
 
         <item
             android:id="@+id/nav_contatti"
