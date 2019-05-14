@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_visualizza_prodotti"
+            android:icon="@drawable/ic_business_center"
+            android:title="Visuallizza prodotti" />
+        <item
+            android:id="@+id/nav_dove_siamo"
+            android:icon="@drawable/ic_location_on"
+            android:title="Dove Siamo" />
+        <item
+            android:id="@+id/nav_personale_aziendale"
+            android:icon="@drawable/ic_supervisor_account"
+            android:title="Personale Aziendale" />
+
+        <item
+            android:id="@+id/nav_contatti"
+            android:icon="@drawable/ic_contact_phone"
+            android:title="Contatti" />
+
+        <item
+            android:id="@+id/nav_info_azienda"
+            android:icon="@drawable/ic_info_outline"
+            android:title="Info Azienda" />
+
+    </group>
+
+</menu>

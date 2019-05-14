@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_light"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".EmailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_orange_light"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="24dp">
+
+        <EditText
+            android:id="@+id/editTextOggettoEmail"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginVertical="0dp"
+            android:ems="10"
+            android:hint="Oggetto Email"
+            android:inputType="textEmailSubject"
+            android:textColorLink="@color/common_google_signin_btn_text_dark_focused" />
+
+        <EditText
+            android:id="@+id/editTestoEmail"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:ems="10"
+            android:hint="Testo Email"
+            android:inputType="textEmailAddress"
+            android:textColorLink="@color/common_google_signin_btn_text_dark_focused" />
+
+        <Button
+            android:id="@+id/buttonInviaEmail"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="40dp"
+            android:text="Invia Email"
+            android:textColorLink="@color/common_google_signin_btn_text_dark_default" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

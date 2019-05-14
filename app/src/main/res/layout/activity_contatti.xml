@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContattiActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="Contatti "
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/infoTxtCredits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="Facebook"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/imageFacebook"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:src="@mipmap/facebook" />
+
+
+        <TextView
+            android:id="@+id/infoTxtCredits2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:text="Instagram"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/imageInstagram"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:src="@mipmap/instagram" />
+
+        <TextView
+            android:id="@+id/infoTxtCredits3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:autoLink="web"
+            android:layout_marginVertical="10dp"
+            android:linksClickable="true"
+            android:text="Twitter"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/imageTwitter"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:padding="10dp"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:layout_gravity="center"
+            android:src="@mipmap/twitter" />
+
+
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
