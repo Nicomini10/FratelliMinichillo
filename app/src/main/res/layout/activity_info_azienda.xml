@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:background="@color/colorPrimary"
         android:orientation="vertical">
 
         <TextView
@@ -31,15 +31,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingTop="30dp"
             android:padding="10dp"
-            android:text="La nostra azienda nasce nel 1995, da un ideà di due fratelli che volero iniziare nel cimmentarsi nel mondo del lavoro.
-            Ad oggi la nostra azienda e diventata tra le migliori nel territorio molisano, perchè utilizziamo solo prodotti di alta qualità
+            android:paddingTop="30dp"
+            android:text="La nostra azienda nasce nel 1995, da un ideà di due fratelli che volero iniziare nel cimmentarsi nel mondo del lavoro. Ad oggi la nostra azienda e diventata tra le migliori nel territorio molisano, perchè utilizziamo solo prodotti di alta qualità
             Operiamo anche fuori regione, senza nessun problema. La nostra forza è la passione che mettiamo in ogni cosa che facciamo."
-            android:textSize="20sp" />
-
-
-
+            android:textSize="18sp" />
 
 
     </LinearLayout>

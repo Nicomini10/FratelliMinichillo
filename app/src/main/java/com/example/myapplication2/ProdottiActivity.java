@@ -29,21 +29,6 @@ public class ProdottiActivity extends AppCompatActivity {
         buttonBalconi = (Button) findViewById(R.id.button4);
         buttonCencelli = (Button) findViewById(R.id.button5);
 
-
-        reverseButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
-        reverseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-
-
-
         buttonPorte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
