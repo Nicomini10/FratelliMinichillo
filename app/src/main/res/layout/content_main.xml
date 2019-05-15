@@ -18,10 +18,25 @@
 
         <ImageView
             android:layout_width="300dp"
-            android:layout_height="399dp"
+            android:layout_height="350dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="70dp"
             android:src="@mipmap/minichillo" />
+
+        <Button
+            android:id="@+id/buttonModificaCredenziali"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:text="Modifica Credenziali" />
+
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:text="Logout" />
 
     </LinearLayout>
 

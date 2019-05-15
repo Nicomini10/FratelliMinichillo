@@ -21,7 +21,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Green"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ScaricaCatalogoActivity"></activity>
+        <activity android:name=".ModificaCredenzialiActivity"></activity>
+        <activity android:name=".ScaricaCatalogoActivity" />
 
         <service
             android:name=".DownloadService"

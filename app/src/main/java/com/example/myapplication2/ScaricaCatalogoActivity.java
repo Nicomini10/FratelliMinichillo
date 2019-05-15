@@ -10,6 +10,7 @@ import android.content.IntentFilter;
 import android.view.View;
 import android.support.v7.widget.Toolbar;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class ScaricaCatalogoActivity extends AppCompatActivity {
 
@@ -51,6 +52,9 @@ public class ScaricaCatalogoActivity extends AppCompatActivity {
             if(b!=null){
 
                 tv.setText(b.getString(DownloadService.EXTRA_MESSAGE));
+
+                Toast.makeText(getBaseContext(), "Catalogo scaricato, lo troverai nei documenti del tuo smartphone!", Toast.LENGTH_LONG).show();
+
             }
         }
     };
@@ -59,6 +63,7 @@ public class ScaricaCatalogoActivity extends AppCompatActivity {
         super.onResume();
         // Register receiver to get message from DownloadService
         registerReceiver(DownloadReceiver, new IntentFilter(DownloadService.ACTION_DOWNLOAD));
+
 
     }
 

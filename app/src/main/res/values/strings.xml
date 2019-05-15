@@ -15,7 +15,7 @@
     <string name="no_account_yet_create_one">Non hai un account? Registrati!</string>
     <string name="already_have_account_login">Hai già un account? Effettua il login!</string>
     <string name="login">Login</string>
-    <string name="register">Registrati</string>
+    <string name="register">Cambia Credenziali</string>
     <string name="confirm">Conferma</string>
     <string name="insert_code">Inserisci il codice di conferma che ti abbiamo inviato via e-mail per confermare il tuo account.</string>
     <string name="password">Password</string>
