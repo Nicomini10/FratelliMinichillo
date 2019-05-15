@@ -25,7 +25,6 @@ import butterknife.ButterKnife;
 
 public class ModificaCredenzialiActivity extends AppCompatActivity {
 
-    @BindView(R.id.input_email) EditText _emailText;
     @BindView(R.id.input_vecchia_password) EditText _oldPassword;
     @BindView(R.id.input_nuova_password) EditText _newPassword;
     @BindView(R.id.btn_go) Button _goButton;
