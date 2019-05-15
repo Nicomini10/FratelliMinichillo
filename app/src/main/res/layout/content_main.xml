@@ -21,7 +21,6 @@
             android:layout_height="399dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="70dp"
-
             android:src="@mipmap/minichillo" />
 
         <TextView

@@ -3,11 +3,11 @@ package com.example.myapplication2;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ListaCancelli extends AppCompatActivity {
+public class ScaricaCatalogoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_cancelli);
+        setContentView(R.layout.activity_scarica_catalogo);
     }
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication2">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -12,7 +11,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name= "android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -22,9 +21,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Green"
         android:usesCleartextTraffic="true">
+        <activity android:name=".ScaricaCatalogoActivity"></activity>
+
         <service
             android:name=".DownloadService"
-            android:exported="false"></service>
+            android:exported="false" />
 
         <activity android:name=".ConfirmationAccountActivity" />
         <activity android:name=".SignupActivity" />
@@ -35,14 +36,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListaCancelli" />
-        <activity android:name=".ListaBalconi" />
-        <activity android:name=".ListaFinestre" />
-        <activity android:name=".ListaPorte" />
         <activity android:name=".EmailActivity" />
         <activity android:name=".InfoAziendaActivity" />
         <activity android:name=".ContattiActivity" />
-        <activity android:name=".ProdottiActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
