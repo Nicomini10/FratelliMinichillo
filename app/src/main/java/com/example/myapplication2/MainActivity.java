@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        Bundle data = getIntent().getExtras();
+        final Bundle data = getIntent().getExtras();
         _usernameText.setText("Benvenuto " + data.getString("username") + "!");
 
 
@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View v) {
 
                 Intent intent = new Intent(getApplicationContext(), ModificaCredenzialiActivity.class);
+                intent.putExtra("username", data.getString("username"));
                 startActivity(intent);
 
             }
