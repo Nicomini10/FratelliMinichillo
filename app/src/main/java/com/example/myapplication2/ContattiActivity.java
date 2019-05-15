@@ -41,7 +41,7 @@ public class ContattiActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Uri uri = Uri.parse("https://www.instagram.com/nicomini10_");
+                Uri uri = Uri.parse("http://www.minichillo.com");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }

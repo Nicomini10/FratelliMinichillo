@@ -53,7 +53,7 @@
             android:layout_marginTop="20dp"
             android:autoLink="web"
             android:linksClickable="true"
-            android:text="Instagram"
+            android:text="Sito Web"
             android:textSize="30sp" />
 
         <ImageView
@@ -64,7 +64,7 @@
             android:autoLink="web"
             android:linksClickable="true"
             android:padding="10dp"
-            android:src="@mipmap/instagram" />
+            android:src="@mipmap/sito1" />
 
         <TextView
             android:id="@+id/infoTxtCredits3"
