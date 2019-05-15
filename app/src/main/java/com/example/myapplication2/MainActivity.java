@@ -19,16 +19,25 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private Button modificaCredenziali;
     private Button logout;
+    @BindView(R.id.userText) TextView _usernameText;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+
+        Bundle data = getIntent().getExtras();
+        _usernameText.setText("Benvenuto " + data.getString("username") + "!");
+
 
         modificaCredenziali = (Button) findViewById(R.id.buttonModificaCredenziali);
         logout = (Button) findViewById(R.id.buttonLogout);

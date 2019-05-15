@@ -61,7 +61,7 @@ public class ConfirmationAccountActivity extends AppCompatActivity {
         progressDialog.show();
 
         String code = _inputCode.getText().toString();
-        Bundle data = getIntent().getExtras();
+        final Bundle data = getIntent().getExtras();
 
         requestQueue = Volley.newRequestQueue(getApplicationContext());
 
@@ -83,6 +83,7 @@ public class ConfirmationAccountActivity extends AppCompatActivity {
                     _confirmButton.setEnabled(true);
                     Toast.makeText(getBaseContext(), "Account confermato!", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    intent.putExtra("username", data.getString("username"));
                     startActivity(intent);
                 } else {
                     progressDialog.dismiss();
