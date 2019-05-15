@@ -21,9 +21,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private Context context;
-    private TextView tv;
-    private String pdfUrl = "http://fratelliminichillows.altervista.org/catalogo.pdf";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,65 +40,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
-        context=this;
-        tv=(TextView)findViewById(R.id.txtmessage);
-        Button btDownload=(Button)findViewById(R.id.btdownload);
-        btDownload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent newIntent=new Intent(context,DownloadService.class);
-                newIntent.setAction(DownloadService.ACTION_DOWNLOAD);
-                newIntent.putExtra(DownloadService.EXTRA_URL, pdfUrl);
-                // Start Download Service
-                tv.setText("Downloading...");
-                context.startService(newIntent);
-
-            }
-        });
-
-    }
-
-    private BroadcastReceiver DownloadReceiver=new BroadcastReceiver(){
-        public void onReceive(Context context, Intent intent){
-            // Display message from DownloadService
-            Bundle b=intent.getExtras();
-            if(b!=null){
-
-                tv.setText(b.getString(DownloadService.EXTRA_MESSAGE));
-            }
-        }
-    };
-
-    protected void onResume(){
-        super.onResume();
-        // Register receiver to get message from DownloadService
-        registerReceiver(DownloadReceiver, new IntentFilter(DownloadService.ACTION_DOWNLOAD));
-
-    }
-
-    protected void onPause(){
-        super.onPause();
-        // Unregister the receiver
-        unregisterReceiver(DownloadReceiver);
-
     }
 
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
-
-
-
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
