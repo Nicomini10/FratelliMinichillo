@@ -13,10 +13,10 @@ import java.net.URL;
 
 public class DownloadService extends IntentService {
 
-    public static final String ACTION_DOWNLOAD = "com.example.dara.myapplication.action.DOWNLOAD";
+    public static final String ACTION_DOWNLOAD = "DOWNLOAD";
 
-    public static final String EXTRA_URL = "com.example.dara.myapplication.extra.URL";
-    public static final String EXTRA_MESSAGE = "com.example.dara.myapplication.extra.message";
+    public static final String EXTRA_URL = "URL";
+    public static final String EXTRA_MESSAGE = "MESSAGE";
 
     public DownloadService() {
         super("DownloadService");
@@ -28,22 +28,19 @@ public class DownloadService extends IntentService {
             final String action = intent.getAction();
             if (ACTION_DOWNLOAD.equals(action)) {
                 final String url = intent.getStringExtra(EXTRA_URL);
-                Log.e("Service", url);
-                downloadImage(url);
+                downloadFile(url);
             }
         }
     }
 
-    private void downloadImage(String urlStr){
+    private void downloadFile(String urlStr){
         FileOutputStream fos=null;
         InputStream is=null;
-        String message="Download failed.";
+        String message="Download fallito!";
         try {
             // Get InputStream from the url
             URL url = new URL(urlStr);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            //connection.setDoInput(true);
-            //connection.connect();
             is=connection.getInputStream();
             String fileName = urlStr.substring(urlStr.lastIndexOf('/') + 1);
             fos=new FileOutputStream(Environment.getExternalStorageDirectory()+"/"+fileName);
@@ -53,7 +50,7 @@ public class DownloadService extends IntentService {
                 fos.write(buffer,0,count);
             }
             fos.flush();
-            message="Download completed";
+            message="Download completato!";
 
 
         }
