@@ -10,4 +10,5 @@ public class InfoAziendaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_azienda);
     }
+
 }

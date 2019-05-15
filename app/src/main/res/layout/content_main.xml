@@ -18,11 +18,25 @@
 
         <ImageView
             android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_height="399dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="70dp"
 
             android:src="@mipmap/minichillo" />
+
+        <TextView
+            android:id="@+id/txtmessage"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scarica il nostro catalogo!" />
+
+        <Button
+            android:id="@+id/btdownload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Download" />
 
 
     </LinearLayout>
