@@ -35,7 +35,7 @@ public class EmailActivity extends AppCompatActivity {
 
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, oggettoEmail.getText().toString());
 
-                emailIntent.putExtra(emailIntent.EXTRA_EMAIL, new String[]{"fratelliminichillo@gmail.com"});
+                emailIntent.putExtra(emailIntent.EXTRA_EMAIL, new String[]{"info@minichillo.com"});
 
                 emailIntent.putExtra(emailIntent.EXTRA_TEXT, testoEmail.getText());
                 emailIntent.setType("message/rfc822");

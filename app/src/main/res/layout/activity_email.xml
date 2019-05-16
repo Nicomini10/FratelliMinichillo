@@ -17,11 +17,17 @@
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="24dp">
 
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/logoemail"/>
+
         <EditText
             android:id="@+id/editTextOggettoEmail"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginVertical="0dp"
+            android:layout_marginVertical="10dp"
             android:ems="10"
             android:hint="Oggetto Email"
             android:inputType="textEmailSubject"
@@ -41,7 +47,7 @@
             android:layout_width="120dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
-            android:layout_marginVertical="40dp"
+            android:layout_marginVertical="30dp"
             android:text="Invia Email"
             android:textColorLink="@color/common_google_signin_btn_text_dark_default" />
     </LinearLayout>
