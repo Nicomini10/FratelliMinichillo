@@ -129,10 +129,8 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public byte[] getBody() {
                 try {
-                    Log.d("DIO", signupJson.toString());
                     return signupJson.toString().getBytes("utf-8");
                 } catch (Exception e) {
-                    Log.d("DIO", e.toString());
                 }
 
                 return null;

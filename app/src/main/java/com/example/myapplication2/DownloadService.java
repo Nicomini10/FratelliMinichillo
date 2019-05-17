@@ -3,8 +3,7 @@ package com.example.myapplication2;
 import android.app.IntentService;
 import android.content.Intent;
 import android.os.Environment;
-import android.util.Log;
-
+import android.os.StrictMode;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,6 +19,8 @@ public class DownloadService extends IntentService {
 
     public DownloadService() {
         super("DownloadService");
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
     }
 
     @Override
@@ -79,4 +80,5 @@ public class DownloadService extends IntentService {
             sendBroadcast(backIntent);
         }
     }
+
 }
