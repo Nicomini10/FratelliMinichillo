@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -27,11 +28,16 @@ public class SignupActivity extends AppCompatActivity {
 
     private static final String TAG = "SignupActivity";
 
-    @BindView(R.id.input_name) EditText _nameText;
-    @BindView(R.id.input_email) EditText _emailText;
-    @BindView(R.id.input_password) EditText _passwordText;
-    @BindView(R.id.btn_signup) Button _signupButton;
-    @BindView(R.id.link_login) TextView _loginLink;
+    @BindView(R.id.input_name)
+    EditText _nameText;
+    @BindView(R.id.input_email)
+    EditText _emailText;
+    @BindView(R.id.input_password)
+    EditText _passwordText;
+    @BindView(R.id.btn_signup)
+    Button _signupButton;
+    @BindView(R.id.link_login)
+    TextView _loginLink;
 
     JSONObject signupJson = new JSONObject();
     private final String SIGNUP_URL = "http://fratelliminichillows.altervista.org/signup.php";
@@ -42,6 +48,8 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         ButterKnife.bind(this);
+
+        requestQueue = Volley.newRequestQueue(getApplicationContext());
 
         _signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +72,7 @@ public class SignupActivity extends AppCompatActivity {
             return;
         }
 
-        _signupButton.setEnabled(false);
+        // _signupButton.setEnabled(false);
 
         final ProgressDialog progressDialog = new ProgressDialog(SignupActivity.this,
                 R.style.AppTheme_Green_Dialog);
@@ -76,8 +84,6 @@ public class SignupActivity extends AppCompatActivity {
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
 
-        requestQueue = Volley.newRequestQueue(getApplicationContext());
-
         try {
 
             signupJson.put("username", username);
@@ -88,20 +94,33 @@ public class SignupActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        StringRequest request = new StringRequest(StringRequest.Method.POST, SIGNUP_URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                progressDialog.dismiss();
-                onSignupSuccess();
+        StringRequest request = new StringRequest(
+                StringRequest.Method.POST,
+                SIGNUP_URL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
 
+                        if (response.equals("Email sent")) {
+                            progressDialog.dismiss();
+                            onSignupSuccess();
+                        } else if(response.equals("DUPLICATE_USERNAME")){
+                            progressDialog.dismiss();
+                            onSignupFailed("Username");
 
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getBaseContext(), "C'è stato un problema di connessione, riprova!", Toast.LENGTH_LONG).show();
-            }
-        }) {
+                        } else if(response.equals("DUPLICATE_EMAIL")){
+                            progressDialog.dismiss();
+                            onSignupFailed("Email");
+                        }
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getBaseContext(), "C'è stato un problema di connessione, riprova!", Toast.LENGTH_LONG).show();
+                    }
+                }) {
             @Override
             public String getBodyContentType() {
                 return "application/json; charset=utf-8";
@@ -110,13 +129,20 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public byte[] getBody() {
                 try {
+                    Log.d("DIO", signupJson.toString());
                     return signupJson.toString().getBytes("utf-8");
                 } catch (Exception e) {
+                    Log.d("DIO", e.toString());
                 }
 
                 return null;
             }
         };
+        request.setRetryPolicy(new DefaultRetryPolicy(
+                15000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
         requestQueue.add(request);
 
     }
@@ -131,6 +157,10 @@ public class SignupActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onSignupFailed(String problem) {
+        _signupButton.setEnabled(true);
+        Toast.makeText(getBaseContext(), problem + " già in uso da un altro account!", Toast.LENGTH_LONG).show();
+    }
 
     public boolean validate() {
         boolean valid = true;
