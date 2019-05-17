@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.ProgressDialog;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -60,7 +61,6 @@ public class SignupActivity extends AppCompatActivity {
     public void signup() {
 
         if (!validate()) {
-            onSignupFailed();
             return;
         }
 
@@ -91,15 +91,9 @@ public class SignupActivity extends AppCompatActivity {
         StringRequest request = new StringRequest(StringRequest.Method.POST, SIGNUP_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                if(response.equals("Email sent")){
-                    progressDialog.dismiss();
-                    onSignupSuccess();
-                }
+                progressDialog.dismiss();
+                onSignupSuccess();
 
-                else {
-                    progressDialog.dismiss();
-                    onSignupFailed();
-                }
 
             }
         }, new Response.ErrorListener() {
@@ -137,10 +131,6 @@ public class SignupActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onSignupFailed() {
-        _signupButton.setEnabled(true);
-        Toast.makeText(getBaseContext(), "Username o email già in uso da un altro account!", Toast.LENGTH_LONG).show();
-    }
 
     public boolean validate() {
         boolean valid = true;
