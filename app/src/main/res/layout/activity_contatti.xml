@@ -57,7 +57,7 @@
             android:textSize="30sp" />
 
         <ImageView
-            android:id="@+id/imageInstagram"
+            android:id="@+id/imageSito"
             android:layout_width="100dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
