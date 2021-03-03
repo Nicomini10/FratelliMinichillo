@@ -5,9 +5,15 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_sito"
+            android:icon="@drawable/ic_launcher_explor_foreground"
+            android:title="Sito Web" />
+
+
+        <item
             android:id="@+id/nav_visualizza_catalogo"
             android:icon="@drawable/ic_business_center"
-            android:title="Scarica catalogo" />
+            android:title="Catalogo Prodotti" />
         <item
             android:id="@+id/nav_dove_siamo"
             android:icon="@drawable/ic_location_on"
@@ -17,6 +23,11 @@
             android:id="@+id/nav_contatti"
             android:icon="@drawable/ic_contact_phone"
             android:title="Contatti" />
+
+        <item
+            android:id="@+id/nav_social"
+            android:icon="@drawable/ic_launcher_social4_foreground"
+            android:title="Social Network" />
 
         <item
             android:id="@+id/nav_info_azienda"

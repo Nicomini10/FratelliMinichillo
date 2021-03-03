@@ -18,13 +18,13 @@
         android:layout_height="100dp"
         android:contentDescription="@string/nav_header_desc"
         android:scaleType="fitStart"
-        app:srcCompat="@mipmap/minichillo2" />
+        app:srcCompat="@mipmap/logo_info_azienda" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:text="Benvenuto nella nostra famiglia!"
+        android:paddingTop="4dp"
+        android:text="Benvenuto nella nostra famiglia!!!"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 

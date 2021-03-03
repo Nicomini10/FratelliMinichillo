@@ -32,7 +32,7 @@ public class ScaricaCatalogoActivity extends AppCompatActivity {
 
     private Context context;
     private TextView tv;
-    private String pdfUrl = "http://fratelliminichillows.altervista.org/catalogo.pdf";
+    private String pdfUrl = "http://fratelliminichillows.altervista.org/Catalogo_Minichillo.pdf";
 
     private NotificationCompat.Builder notificationBuilder;
     private static final int MY_NOTIFICATION_ID = 123;
@@ -92,7 +92,7 @@ public class ScaricaCatalogoActivity extends AppCompatActivity {
                 .setContentText("Premi su questa notifica per visualizzarlo!");
 
 
-        File file = new File(Environment.getExternalStorageDirectory() + "/catalogo.pdf");
+        File file = new File(Environment.getExternalStorageDirectory() + "/Catalogo_Minichillo.pdf");
 
         Intent resultIntent = null;
 

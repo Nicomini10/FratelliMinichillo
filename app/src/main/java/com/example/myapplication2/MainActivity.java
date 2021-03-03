@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -85,7 +86,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_visualizza_catalogo) {
+        if (id == R.id.nav_sito) {
+
+            Uri uri = Uri.parse("https://fratelliminichillosnc.wordpress.com");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+
+
+        } else if (id == R.id.nav_visualizza_catalogo) {
 
             Intent intent = new Intent(getApplicationContext(), ScaricaCatalogoActivity.class);
             startActivity(intent);
@@ -101,7 +109,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(getApplicationContext(), ContattiActivity.class);
             startActivity(intent);
 
-        } else if (id == R.id.nav_info_azienda) {
+        } else if (id == R.id.nav_social) {
+
+            Intent intent = new Intent(getApplicationContext(), SocialActivity.class);
+            startActivity(intent);
+
+        }
+        else if (id == R.id.nav_info_azienda) {
 
             Intent intent = new Intent(getApplicationContext(),InfoAziendaActivity.class);
             startActivity(intent);

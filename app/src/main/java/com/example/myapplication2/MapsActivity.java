@@ -39,7 +39,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         LatLng fratelliminichillo = new LatLng(41.801764, 14.567596);
-        mMap.addMarker(new MarkerOptions().position(fratelliminichillo).title("Fratelli Minichillo S.N.C"));
+        mMap.addMarker(new MarkerOptions().position(fratelliminichillo).title("Trivento(CB) 86029 Zona industriale loc. Piana D'Ischia"));
         float zoomLevel = 10.0f;
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fratelliminichillo, zoomLevel));
 

@@ -23,7 +23,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Green"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ModificaCredenzialiActivity"></activity>
+        <activity android:name=".SocialActivity"></activity>
+        <activity android:name=".ModificaCredenzialiActivity" />
         <activity android:name=".ScaricaCatalogoActivity" />
 
         <service
