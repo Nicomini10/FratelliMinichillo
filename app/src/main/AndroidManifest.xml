@@ -17,9 +17,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/icona"
+        android:icon="@mipmap/icona2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/icona"
+        android:roundIcon="@mipmap/icona2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Green"
         android:usesCleartextTraffic="true">
