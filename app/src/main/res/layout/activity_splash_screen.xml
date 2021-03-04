@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#009688"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="90dp"
+            android:gravity="center"
+            android:text="F.lli Minichillo s.n.c."
+            android:textColor="@android:color/background_light"
+            android:textSize="50dp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imageViewSlpashScreen"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="60dp"
+            app:srcCompat="@mipmap/icona" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

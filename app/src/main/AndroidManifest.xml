@@ -26,7 +26,15 @@
         <activity android:name=".SocialActivity"></activity>
         <activity android:name=".ModificaCredenzialiActivity" />
         <activity android:name=".ScaricaCatalogoActivity" />
+        <activity android:name=".SplashScreenActivity">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <service
             android:name=".DownloadService"
             android:exported="false" />
@@ -34,11 +42,6 @@
         <activity android:name=".ConfirmationAccountActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".EmailActivity" />
         <activity android:name=".InfoAziendaActivity" />

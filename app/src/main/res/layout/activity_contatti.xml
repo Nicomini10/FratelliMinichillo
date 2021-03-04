@@ -47,7 +47,7 @@
             android:layout_marginTop="-60dp"
             android:linksClickable="true"
             android:text="- 0874 873298"
-            android:textSize="30sp" />
+            android:textSize="28sp" />
 
         <ImageView
             android:id="@+id/imagemobile"
@@ -69,8 +69,8 @@
             android:layout_marginStart="120dp"
             android:layout_marginTop="-80dp"
             android:linksClickable="true"
-            android:text="- 335 8261662              - 368 7845913"
-            android:textSize="30sp" />
+            android:text="- 335 8261662               - 368 7845913"
+            android:textSize="28sp" />
 
         <ImageView
             android:id="@+id/imagefax"
@@ -93,7 +93,7 @@
             android:layout_marginTop="-60dp"
             android:linksClickable="true"
             android:text="- 0874 873678"
-            android:textSize="30sp" />
+            android:textSize="28sp" />
 
 
         <android.support.design.widget.FloatingActionButton
@@ -117,18 +117,18 @@
             android:autoLink="web"
             android:linksClickable="true"
             android:text="info@minichillo.com"
-            android:textSize="27sp" />
+            android:textSize="24sp" />
 
 
         <TextView
             android:id="@+id/infoTxttext"
-            android:layout_width="wrap_content"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="30dp"
-            android:text="(Clicca sul simbolo della mail per inviare una email direttamenta dall'app)"
-            android:textSize="18sp" />
+            android:text="(Clicca sul simbolo della mail per inviare una e-mail direttamenta dall'app)"
+            android:textSize="15sp" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
