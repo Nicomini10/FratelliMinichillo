@@ -13,7 +13,6 @@ public class ContattiActivity extends AppCompatActivity {
     private FloatingActionButton email;
     private FloatingActionButton telefono;
     private FloatingActionButton telefonoMobile;
-    private FloatingActionButton fax;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +22,6 @@ public class ContattiActivity extends AppCompatActivity {
         email = (FloatingActionButton) findViewById(R.id.buttonEmail);
         telefono = (FloatingActionButton) findViewById(R.id.buttontelefono);
         telefonoMobile = (FloatingActionButton) findViewById(R.id.buttontelefonomobile);
-        fax = (FloatingActionButton) findViewById(R.id.buttonfax);
 
 
 
@@ -61,18 +59,6 @@ public class ContattiActivity extends AppCompatActivity {
 
             }
         });
-
-
-        fax.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:0874873678"));
-                startActivity(intent);
-
-            }
-        });
-
 
     }
 }

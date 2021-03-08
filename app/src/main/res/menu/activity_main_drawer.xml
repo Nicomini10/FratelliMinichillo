@@ -20,14 +20,19 @@
             android:title="Dove Siamo" />
 
         <item
+            android:id="@+id/nav_social"
+            android:icon="@drawable/ic_launcher_social4_foreground"
+            android:title="Social Network" />
+
+        <item
             android:id="@+id/nav_contatti"
             android:icon="@drawable/ic_contact_phone"
             android:title="Contatti" />
 
         <item
-            android:id="@+id/nav_social"
-            android:icon="@drawable/ic_launcher_social4_foreground"
-            android:title="Social Network" />
+            android:id="@+id/nav_orari"
+            android:icon="@drawable/ic_launcher_orari_foreground"
+            android:title="Orari" />
 
         <item
             android:id="@+id/nav_info_azienda"

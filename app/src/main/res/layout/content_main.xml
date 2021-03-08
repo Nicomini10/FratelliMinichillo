@@ -23,7 +23,7 @@
             android:gravity="center"
             android:paddingTop="80dp"
             android:text="Benvenuto"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
         <ImageView
             android:layout_width="280dp"

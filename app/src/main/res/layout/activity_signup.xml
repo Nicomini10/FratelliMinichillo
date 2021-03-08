@@ -19,7 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="24dp"
             android:contentDescription="@string/logo"
-            android:src="@mipmap/minichillo2" />
+            android:src="@mipmap/icona" />
 
         <!--  Name Label -->
         <android.support.design.widget.TextInputLayout

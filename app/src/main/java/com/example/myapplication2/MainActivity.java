@@ -104,20 +104,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
             startActivity(intent);
 
-        } else if (id == R.id.nav_contatti) {
-
-            Intent intent = new Intent(getApplicationContext(), ContattiActivity.class);
-            startActivity(intent);
-
         } else if (id == R.id.nav_social) {
 
             Intent intent = new Intent(getApplicationContext(), SocialActivity.class);
             startActivity(intent);
 
-        }
-        else if (id == R.id.nav_info_azienda) {
+        } else if (id == R.id.nav_contatti) {
 
-            Intent intent = new Intent(getApplicationContext(),InfoAziendaActivity.class);
+            Intent intent = new Intent(getApplicationContext(), ContattiActivity.class);
+            startActivity(intent);
+
+        } else if (id == R.id.nav_orari) {
+
+            Intent intent = new Intent(getApplicationContext(), OrariActivity.class);
+            startActivity(intent);
+
+        } else if (id == R.id.nav_info_azienda) {
+
+            Intent intent = new Intent(getApplicationContext(), InfoAziendaActivity.class);
             startActivity(intent);
 
         }
