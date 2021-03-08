@@ -14,6 +14,12 @@
             android:id="@+id/nav_visualizza_catalogo"
             android:icon="@drawable/ic_business_center"
             android:title="Catalogo Prodotti" />
+
+        <item
+            android:id="@+id/nav_partner_tecnici"
+            android:icon="@drawable/ic_launcher_partner_foreground"
+            android:title="Partner Tecnici" />
+
         <item
             android:id="@+id/nav_dove_siamo"
             android:icon="@drawable/ic_location_on"

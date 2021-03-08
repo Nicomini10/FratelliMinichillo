@@ -23,7 +23,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Green"
         android:usesCleartextTraffic="true">
-        <activity android:name=".OrariActivity"></activity>
+        <activity android:name=".PartnerTecniciActivity"></activity>
+        <activity android:name=".OrariActivity" />
         <activity android:name=".SocialActivity" />
         <activity android:name=".ModificaCredenzialiActivity" />
         <activity android:name=".ScaricaCatalogoActivity" />
@@ -41,7 +42,7 @@
 
         <activity android:name=".ConfirmationAccountActivity" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".EmailActivity" />
         <activity android:name=".InfoAziendaActivity" />
         <activity android:name=".ContattiActivity" />

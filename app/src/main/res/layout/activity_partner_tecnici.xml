@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PartnerTecniciActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#009688"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="Partner Tecnici"
+            android:textSize="30sp" />
+
+
+        <ImageView
+            android:id="@+id/imageDomal"
+            android:layout_width="280dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:autoLink="web"
+            android:layout_marginTop="-20dp"
+            android:linksClickable="true"
+            android:src="@mipmap/domal" />
+
+        <ImageView
+            android:id="@+id/imageInnova"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:layout_marginTop="-25dp"
+            android:src="@mipmap/innova" />
+
+
+        <ImageView
+            android:id="@+id/imageAluplast"
+            android:layout_width="220dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:src="@mipmap/aluplast" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

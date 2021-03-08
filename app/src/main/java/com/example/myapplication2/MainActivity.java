@@ -99,6 +99,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
 
 
+        } else if (id == R.id.nav_partner_tecnici) {
+
+            Intent intent = new Intent(getApplicationContext(), PartnerTecniciActivity.class);
+            startActivity(intent);
+
+
         } else if (id == R.id.nav_dove_siamo) {
 
             Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
