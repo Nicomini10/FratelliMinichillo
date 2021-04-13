@@ -23,9 +23,9 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="95dp"
+            android:layout_height="120dp"
             android:layout_marginTop="30dp"
-            android:src="@mipmap/logo_info_azienda" />
+            android:src="@mipmap/icona" />
 
         <TextView
             android:id="@+id/textView6"
@@ -34,7 +34,7 @@
             android:gravity="center"
             android:padding="40dp"
             android:paddingTop="30dp"
-            android:text="Produzione: Infissi in alluminio, Alluminio - legno, P.V.C., legno – alluminio, persiane,  porte ingresso, porte blindate, porte basculante, porte  Sezionali, porte automatiche, controtelai in lamiera, zinc. e legno -  cancelli, ringhiere e grate in  ferro, scale da interno e da esterno – lavorazione di pressopiegati in lamiere - curvature profilati in alluminio"
+            android:text="Produzione: Infissi in alluminio, Alluminio - legno, P.V.C., legno – alluminio, persiane,  porte ingresso, porte blindate, porte basculante, porte  Sezionali, porte automatiche, controtelai in lamiera, zinc. e legno -  cancelli, ringhiere e grate in  ferro, scale da interno e da esterno – lavorazione di pressopiegati in lamiere - curvature profilati in alluminio."
             android:textSize="18sp" />
 
         <ImageView

@@ -12,7 +12,7 @@ public class SocialActivity extends AppCompatActivity {
 
     private ImageView facebook;
     private ImageView instagram;
-    private ImageView twitter;
+    private ImageView linkedln;
 
 
     @Override
@@ -22,7 +22,7 @@ public class SocialActivity extends AppCompatActivity {
 
         facebook = (ImageView) findViewById(R.id.imageFacebook);
         instagram = (ImageView) findViewById(R.id.imageInstagram);
-        twitter = (ImageView) findViewById(R.id.imageTwitter);
+        linkedln = (ImageView) findViewById(R.id.imageLinkedln);
 
         facebook.setOnClickListener(new View.OnClickListener() {
 
@@ -46,12 +46,12 @@ public class SocialActivity extends AppCompatActivity {
             }
         });
 
-        twitter.setOnClickListener(new View.OnClickListener() {
+        linkedln.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                Uri uri = Uri.parse("https://twitter.com/fratelli_mini");
+                Uri uri = Uri.parse("https://www.linkedin.com/in/fratelli-minichillo-s-n-c-5b498b20a/");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }

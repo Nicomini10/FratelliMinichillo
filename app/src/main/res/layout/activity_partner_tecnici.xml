@@ -46,7 +46,7 @@
             android:autoLink="web"
             android:linksClickable="true"
             android:layout_marginTop="-25dp"
-            android:src="@mipmap/innova" />
+            android:src="@mipmap/ic_launcher_innova_foreground" />
 
 
         <ImageView

@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:text="Lunedì:          8:30 - 18:00"
             android:textSize="25sp" />
 
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:text="Martedì:        8:30 - 18:00"
             android:textSize="25sp" />
 
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:text="Mercoledì:    8:30 - 18:00"
             android:textSize="25sp" />
 
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:text="Giovedì:         8:30 - 18:00"
             android:textSize="25sp" />
 
@@ -75,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:text="Venerdì:         8:30 - 18:00"
             android:textSize="25sp" />
 
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:text="Sabato:          8:30 - 12:30"
             android:textSize="25sp" />
 
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:text="Domenica:        Chiuso"
             android:textSize="25sp" />
 
