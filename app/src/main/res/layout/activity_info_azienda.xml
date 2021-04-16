@@ -34,7 +34,7 @@
             android:gravity="center"
             android:padding="30dp"
             android:paddingTop="30dp"
-            android:text="Produzione: Infissi in Alluminio, Alluminio - Legno, P.V.C., Legno – Alluminio, Porte blindate, Porte basculante, Porte sezzionali, Porte automatiche, Controtelai termici in legno - Cancelli, Ringhiere e Grate in ferro, Scale da interno e da esterno - Lavorazione di pressopiegati in lamiera - Curvature profilati."
+            android:text="Produzione: Infissi in Alluminio, Alluminio - Legno, P.V.C., Legno – Alluminio, Persiane, Porte blindate, Porte basculante, Porte sezzionali, Porte automatiche, Controtelai termici in legno - Cancelli, Ringhiere e Grate in ferro, Scale da interno e da esterno - Lavorazione di pressopiegati in lamiera - Curvature profilati."
             android:textSize="18sp" />
 
         <ImageView
